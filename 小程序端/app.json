@@ -1,0 +1,111 @@
+{
+	"pages": [
+		"projects/meetcollege/pages/default/index/default_index",
+		"projects/meetcollege/pages/about/list/about_list",
+		"projects/meetcollege/pages/about/index/about_index",
+		"projects/meetcollege/pages/search/search",
+		"projects/meetcollege/pages/my/index/my_index",
+		"projects/meetcollege/pages/my/reg/my_reg",
+		"projects/meetcollege/pages/my/edit/my_edit",
+		"projects/meetcollege/pages/my/login/my_login",
+		"projects/meetcollege/pages/my/pwd/my_pwd",
+		"projects/meetcollege/pages/my/fav/my_fav",
+		"projects/meetcollege/pages/my/foot/my_foot",
+		"projects/meetcollege/pages/news/index/news_index",
+		"projects/meetcollege/pages/news/detail/news_detail",
+		"projects/meetcollege/pages/news/cate1/news_cate1",
+		"projects/meetcollege/pages/news/cate2/news_cate2",
+		"projects/meetcollege/pages/admin/news/list/admin_news_list",
+		"projects/meetcollege/pages/admin/news/add/admin_news_add",
+		"projects/meetcollege/pages/admin/news/edit/admin_news_edit",
+		"projects/meetcollege/pages/admin/setup/about/admin_setup_about",
+		"projects/meetcollege/pages/admin/setup/about_list/admin_setup_about_list",
+		"projects/meetcollege/pages/admin/index/home/admin_home",
+		"projects/meetcollege/pages/admin/index/login/admin_login",
+		"projects/meetcollege/pages/admin/content/admin_content",
+		"projects/meetcollege/pages/admin/mgr/edit/admin_mgr_edit",
+		"projects/meetcollege/pages/admin/mgr/list/admin_mgr_list",
+		"projects/meetcollege/pages/admin/mgr/add/admin_mgr_add",
+		"projects/meetcollege/pages/admin/mgr/pwd/admin_mgr_pwd",
+		"projects/meetcollege/pages/admin/user/list/admin_user_list",
+		"projects/meetcollege/pages/admin/user/detail/admin_user_detail",
+		"projects/meetcollege/pages/admin/user/export/admin_user_export",
+		"projects/meetcollege/pages/meet/index/meet_index",
+		"projects/meetcollege/pages/meet/detail/meet_detail",
+		"projects/meetcollege/pages/meet/join/meet_join",
+		"projects/meetcollege/pages/meet/my_join_list/meet_my_join_list",
+		"projects/meetcollege/pages/meet/my_join_detail/meet_my_join_detail",
+		"projects/meetcollege/pages/meet/calendar/meet_calendar",
+		"projects/meetcollege/pages/meet/join_list/meet_join_list",
+		"projects/meetcollege/pages/meet/cate/meet_cate",
+		"projects/meetcollege/pages/admin/meet/join_list/admin_meet_join_list",
+		"projects/meetcollege/pages/admin/meet/export/admin_meet_export",
+		"projects/meetcollege/pages/admin/meet/scan/admin_meet_scan",
+		"projects/meetcollege/pages/admin/meet/list/admin_meet_list",
+		"projects/meetcollege/pages/admin/meet/add/admin_meet_add",
+		"projects/meetcollege/pages/admin/meet/edit/admin_meet_edit",
+		"projects/meetcollege/pages/admin/meet/day_set/admin_meet_day_set",
+		"cmpts/public/form/form_set/field/form_set_field",
+		"cmpts/public/form/form_show/content/form_show_content",
+		"pages/test1/test1"
+	],
+	"window": {
+		"backgroundColor": "#f1f1f1",
+		"backgroundTextStyle": "dark",
+		"navigationBarBackgroundColor": "#339900",
+		"navigationBarTitleText": "大学小程序",
+		"navigationBarTextStyle": "white"
+	},
+	"tabBar": {
+		"custom": false,
+		"backgroundColor": "#fefefe",
+		"color": "#999999",
+		"selectedColor": "#339900",
+		"list": [
+			{
+				"pagePath": "projects/meetcollege/pages/default/index/default_index",
+				"text": "首页",
+				"iconPath": "/projects/meetcollege/images/tabbar/home.png",
+				"selectedIconPath": "/projects/meetcollege/images/tabbar/home_cur.png"
+			},
+			{
+				"pagePath": "projects/meetcollege/pages/news/cate1/news_cate1",
+				"text": "本校概况",
+				"iconPath": "/projects/meetcollege/images/tabbar/cate1.png",
+				"selectedIconPath": "/projects/meetcollege/images/tabbar/cate1_cur.png"
+			},
+			{
+				"pagePath": "projects/meetcollege/pages/news/cate2/news_cate2",
+				"text": "学院系所",
+				"iconPath": "/projects/meetcollege/images/tabbar/cate2.png",
+				"selectedIconPath": "/projects/meetcollege/images/tabbar/cate2_cur.png"
+			},
+			{
+				"pagePath": "projects/meetcollege/pages/meet/calendar/meet_calendar",
+				"text": "预约日历",
+				"iconPath": "/projects/meetcollege/images/tabbar/ticket.png",
+				"selectedIconPath": "/projects/meetcollege/images/tabbar/ticket_cur.png"
+			},
+			{
+				"pagePath": "projects/meetcollege/pages/my/index/my_index",
+				"text": "我的",
+				"iconPath": "/projects/meetcollege/images/tabbar/my.png",
+				"selectedIconPath": "/projects/meetcollege/images/tabbar/my_cur.png"
+			}
+		]
+	},
+	"requiredPrivateInfos": [
+		"chooseLocation"
+	],
+	"permission": {
+		"scope.userLocation": {
+			"desc": "获取你当前位置信息用于小程序位置接口的效果展示"
+		}
+	},
+	"usingComponents": {
+		"cmpt-comm-list": "/cmpts/public/list/comm_list_cmpt",
+		"cmpt-picker": "/cmpts/public/picker/picker_cmpt",
+		"cmpt-modal": "/cmpts/public/modal/modal_cmpt"
+	},
+	"sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,80 @@
+<view class="main">
+  <view class="up">
+    <image mode="widthFix" src="../../../images/home.jpg" />
+  </view>
+  <view class="down">
+    <view class="menu">
+      <view wx:for="{{newsCateList}}" wx:key="key" bindtap="url"   data-url="../../news/index/news_index?id={{item.id}}" class="item">
+        <view class="item-inner">
+          <view class="img">
+            <image src="../../../images/home/n{{item.id}}.png" />
+          </view>
+          <view class="title">{{item.title}}</view>
+        </view>
+      </view>
+
+      <view wx:for="{{meetCateList}}" wx:key="key" bindtap="url" data-url="../../meet/cate/meet_cate?id={{item.id}}" class="item">
+        <view class="item-inner">
+          <view class="img">
+            <image src="../../../images/home/m{{item.id}}.png" />
+          </view>
+          <view class="title">{{item.title}}</view>
+        </view>
+      </view>
+
+    </view>
+
+    <!-- meet begin -->
+    <view class="area shadow-project1">
+			<view class="hot-line" bindtap="url" data-url="../../meet/index/meet_index">
+               
+				<view class="left"> <view class="mark"></view>活动&讲座</view>
+				<view class="right">More»</view>
+			</view> 
+			<view wx:if="{{!meetList}}" class="margin-top load loading text-l load-project"></view>
+            <view class="text-s padding-s text-grey" wx:if="{{meetList.length==0}}">暂无记录~</view>
+			<!--横向拖动 Begin-->
+			<view class="scroll-x">
+				<scroll-view class="scroll-view" scroll-x="true">
+					<view class="inner">
+						<!-- 这里放置你的横向滚动内容 -->
+						<view class="scroll-item" wx:for="{{meetList}}" wx:key="index" bind:tap="url" data-url="../../meet/detail/meet_detail?id={{item.meetId}}">
+							<image src="{{item.meetObj.cover[0]}}" class="loading" mode="aspectFill" />
+							<text class="title text-cut">{{item.meetTitle}}</text>
+							<text class="mark text-cut">{{item.meetCateName}}</text>
+						</view>
+					</view>
+				</scroll-view>
+			</view>
+			<!--横向拖动 END-->
+		</view>
+     <!-- meet END. -->
+
+    <view class="vouch-box">
+      <view class="title">
+        <view class="mark"></view>
+        <view class="txt">最新资讯</view>
+      </view>
+      <view wx:if="{{!newsList}}" class="margin-top load loading text-l load-project"></view>
+      <view class="text-s padding-s text-grey" wx:if="{{newsList.length==0}}">暂无记录~</view>
+      <view class="list">
+        <view class="item" wx:for="{{newsList}}" wx:key="k" bind:tap="url" data-url="../../news/detail/news_detail?id={{item.newsId}}">
+          <view class="left">
+            <view class="line content-cut-one">{{item.newsTitle}}</view>
+            <view class="bottom">{{item.newsCateName}} <text class="margin-left-xs">{{item.addTime}}</text></view>
+          </view>
+          <view class="right">
+            <image mode="aspectFill" lazy-load="{{true}}" class="loading" src="{{item.newsObj.cover[0]}}"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <view style="height: 100rpx;"></view>
+</view>
+
+<block wx:if="{{skin.IS_SUB}}">
+  <import src="../../tpls/menu_tpl.wxml" />
+  <template is="menuTpl" data="{{curMenu:'default_index',returnHome:false}}" />
+</block>
